@@ -1,0 +1,246 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+      background-color: #000927;
+      color: #ffffff;
+      padding: 20px;
+  }
+
+
+  #main-title {
+      font-size: 3rem;
+      text-align: center;
+      background: linear-gradient(45deg, #3af5b7, #086296);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+  }
+
+  #welcome-message {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      color: #ffffffcc;
+  }
+
+
+  #projects-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+  }
+
+  .project-card {
+      background-color: #1c1c3a;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s, box-shadow 0.3s;
+
+  }
+
+  .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 255, 180, 0.3);
+  }
+
+  .project-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #3af5b7;
+  }
+
+  .project-card p {
+      font-size: 1rem;
+      color: #ffffffcc;
+      margin-bottom: 10px;
+  }
+
+  .project-card a {
+      display: inline-block;
+      margin-top: auto;
+      text-decoration: none;
+      color: #0f90db;
+      font-weight: bold;
+      transition: color 0.3s;
+  }
+
+  .project-card a:hover {
+      color: #3af5b7;
+  }
+
+
+
+
+  .btn {
+      margin-top: 20px;
+      background-color: #086296;
+      color: #3af5b7;
+      border: none;
+      padding: 10px 20px;
+
+      cursor: pointer;
+      transition: background-color 0.3s;
+      align-self: flex-start;
+      border-radius: 10px;
+  }
+
+  .card-content .btn {
+      margin: 20px;
+  }
+
+  .btn:hover {
+      background-color: #3af5b7;
+      color: #086296;
+  }
+
+  .hidden {
+      display: none;
+  }
+
+  .img-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 10px;
+      padding: 10px;
+
+  }
+
+  .card-content {
+      background-color: #2a2a4a;
+      margin-top: 10px;
+      color: #ffffff99;
+      border: #3af5b7 outset 1px;
+      border-radius: 20px;
+      animation: sladeInTop 1s ease;
+  }
+
+  .img-ss {
+      width: 100%;
+      border-radius: 50px;
+
+  }
+
+  .img-container {
+      border-radius: 50px;
+      animation: sladeInRight 1s ease-out;
+      width: 45%;
+      margin: 1%;
+
+  }
+
+  .img-wrapper:nth-of-type(2) {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-left: auto;
+
+  }
+
+  .img-container:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+      box-shadow: 0 20px 20px rgba(0, 255, 180, 0.3);
+  }
+
+  .text-container:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s;
+      box-shadow: 0 10px 20px rgba(0, 255, 180, 0.3);
+  }
+
+
+  .text-container {
+
+      display: flex;
+      flex-direction: column;
+      background-color: #2a2a4a;
+      width: 50%;
+      margin: 1%;
+      padding: 5%;
+      gap: 10px;
+      border-radius: 50px;
+      animation: sladeInLeft 1s ease-out;
+  }
+
+  .img-wrapper:nth-of-type(2) .text-container {
+      padding-left: 40px;
+      text-align: left;
+      padding-left: 15%;
+
+  }
+
+  .list-elements {
+     
+      list-style-type: none;
+      padding-left: 20px;
+      color: #ffffff99;
+      padding: 10px;
+      list-style: none;
+
+  }
+
+  footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #ffffff66;
+  }
+
+
+  @media (max-width: 600px) {
+      #main-title {
+          font-size: 2.2rem;
+      }
+
+  }
+
+  @keyframes sladeInRight {
+
+      from {
+          opacity: 0;
+          transform: translateX(500px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
+
+  }
+
+  @keyframes sladeInLeft {
+
+      from {
+          opacity: 0;
+          transform: translateX(-500px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+
+  @keyframes sladeInTop {
+
+      from {
+          opacity: 0;
+          transform: translateY(-500px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
