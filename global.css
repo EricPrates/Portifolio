@@ -12,9 +12,32 @@
      --background-color: #000927;
      --card-background: #1c1c3a;
      --text-color: #ffffff;
-    
+     --vendasViagens-color: #0d94e2;
+     --biblioteca-color: #4c26f5;
+     
+     
  }
 
+
+ #theme-toggle {
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     background: linear-gradient(90deg, #0d94e2, #058ddc);
+     color: #ffffff;
+     border: none;
+     padding: 10px 20px;
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s;
+     z-index: 1000;
+     border-radius: 10px;
+ }
+#theme-toggle:hover {
+     background: linear-gradient(90deg, #058ddc, #0d94e2);
+     color: #ffffffcc;
+    transform: scale(1.07);
+
+ }
  body {
      background-color: var(--background-color);
      color: #ffffff;
@@ -26,14 +49,7 @@
      margin: 0 auto;
      padding: 20px;
  }
-.separator {
-    border: solid var(--fitTrack-color);
-    height: 300px;
-    border-width: 1px;
-   
-   
-   
-}
+
  #main-title {
      font-size: 3rem;
      text-align: center;
@@ -130,18 +146,28 @@
  }
 
  .img-wrapper {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
      align-items: center;
      width: 100%;
      margin: 10px;
      padding: 10px;
+     gap: 30px;
 
 
  }
 
+ .img-wrapper:nth-of-type(even) {
+     direction: rtl;
+ }
+
+ .img-wrapper:nth-of-type(even) .text-container,
+ .img-wrapper:nth-of-type(even) .img-container {
+     direction: ltr;
+ }
+
  .card-content {
+
      background-color: #2a2a4a;
      margin-top: 10px;
      color: #ffffff99;
@@ -150,48 +176,142 @@
 
  }
 
- .img-ss {
-     width: 100%;
-     border-radius: 50px;
+ .fitTrack .card-content {
+     border-color: var(--fitTrack-color);
 
 
  }
 
- .img-container {
+ .fitTrack h2 {
+     color: var(--fitTrack-color);
+ }
+
+ .fitTrack .btn {
+     background-color: var(--fitTrack-color);
+     color: #ffffff;
+ }
+
+ .fitTrack .btn:hover {
+     background-color: #ffffff;
+     color: var(--fitTrack-color);
+ }
+
+ .project-card.fitTrack:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 20px rgba(241, 125, 30, 0.3);
+ }
+
+ .fitTrack .text-container:hover {
+     transform: scale(1.0);
+     transition: transform 0.3s;
+     box-shadow: 0 10px 20px rgba(241, 125, 30, 0.3);
+ }
+
+ .fitTrack .img-ss:hover {
+     transform: scale(1.02);
+     transition: transform 0.3s;
+     box-shadow: 0 10px 20px rgba(241, 125, 30, 0.3);
+ }
+
+ .vendasViagens .card-content {
+     border-color: var(--vendasViagens-color);
+ }
+
+ .vendasViagens h2 {
+     color: var(--vendasViagens-color);
+ }
+
+ .vendasViagens .btn {
+     background-color: var(--vendasViagens-color);
+     color: #ffffff;
+ }
+
+ .vendasViagens .btn:hover {
+     background-color: #ffffff;
+     color: var(--vendasViagens-color);
+ }
+
+ .project-card.vendasViagens:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 20px rgba(13, 148, 226, 0.3);
+ }
+
+ .vendasViagens .text-container:hover {
+     transform: scale(1.0);
+     transition: transform 0.3s;
+     box-shadow: 0 10px 20px rgba(13, 148, 226, 0.3);
+ }
+
+ .vendasViagens .img-ss:hover {
+     transform: scale(1.02);
+     transition: transform 0.3s;
+     box-shadow: 0 10px 20px rgba(13, 148, 226, 0.3);
+ }
+
+ .biblioteca .card-content {
+     border-color: var(--biblioteca-color);
+ }
+
+ .biblioteca h2 {
+     color: var(--biblioteca-color);
+ }
+
+ .biblioteca .btn {
+     background-color: var(--biblioteca-color);
+     color: #ffffff;
+ }
+
+ .biblioteca .btn:hover {
+     background-color: #ffffff;
+     color: var(--biblioteca-color);
+ }
+
+ .project-card.biblioteca:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 20px rgba(76, 38, 245, 0.3);
+ }
+
+ .biblioteca .text-container:hover {
+     transform: scale(1.0);
+     transition: transform 0.3s;
+     box-shadow: 0 10px 20px rgba(76, 38, 245, 0.3);
+ }
+
+ .biblioteca .img-ss:hover {
+     transform: scale(1.02);
+     transition: transform 0.3s;
+     box-shadow: 0 10px 20px rgba(76, 38, 245, 0.3);
+ }
+
+ .img-ss {
+
+     width: 95%;
      border-radius: 50px;
-     width: 45%;
-     margin: 1%;
-     animation: slideInRight 1s ease-out;
-     padding: 20px;
+
 
  }
 
  .img-ss:hover {
 
-     transform: scale(1.02);
+     transform: scale(1.05);
      transition: transform 0.3s;
-     box-shadow: 0 10px 20px rgba(0, 255, 180, 0.3);
+    
 
- }
-
- .img-wrapper:nth-of-type(even) {
-     display: flex;
-     flex-direction: row-reverse;
  }
 
 
  .text-container:hover {
-     transform: scale(1.0);
+     transform: scale(1.05);
      transition: transform 0.3s;
      box-shadow: 0 10px 20px rgba(0, 255, 180, 0.3);
+
  }
 
 
  .text-container {
-     display: flex;
-     flex-direction: column;
+
      background-color: #2a2a4a;
-     width: 50%;
+     width: 95%;
      margin: 1%;
      padding: 20px;
      gap: 10px;
@@ -199,12 +319,7 @@
      animation: slideInLeft 1s ease-out;
  }
 
- .img-wrapper:nth-of-type(even) .text-container {
-     padding-left: 40px;
-     text-align: left;
-     padding-left: 15%;
 
- }
 
  .list-elements {
 
@@ -293,13 +408,6 @@
      .text-container {
          padding: 20px;
          text-align: center;
-     }
-
-     .img-container {
-         width: 80%;
-         margin: 20px auto;
-         animation: slideInTop 1s ease-out;
-
      }
 
      .img-wrapper:nth-of-type() .text-container {

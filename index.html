@@ -9,13 +9,14 @@
 </head>
 
 <body>
+    <button id="theme-toggle">Alterar Tema</button>
     <div class="container">
         <h1 id="main-title">Code Journey</h1>
         <p id="welcome-message">Cursando Análise e Desenvolvimento de Sistemas | Desenvolvedor Full Stack | TypeScript,
             React, Next.js, Java, JavaScript</p>
 
         <section id="projects-section">
-            <div class="project-card">
+            <div class="project-card fitTrack">
                 <h2>FitTrack</h2>
                 <p>Aplicativo para organização de treinos e histórico de exercícios, utilizando React, Next.js,
                     TypeScript e
@@ -47,10 +48,9 @@
                                 <li class="list-elements">Integração com API de treinos e exercícios ExerciseDB.</li>
                             </ul>
 
-
                         </div>
-                        <hr class="separator" size="300px"/>
-                        <div class="img-container">
+
+                        <div class="img-container hidden">
                             <a href="src\img\fitTrackLogin.png" target="_blank">
                                 <img class="img-ss" src="src\img\fitTrackLogin.png" alt="Imagem do projeto FitTrack"
                                     class="project-image">
@@ -78,7 +78,7 @@
                     <button class="btn">Ver menos</button>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card vendasViagens">
                 <h2>Vendas de Viagens</h2>
                 <p>Sistema mobile de vendas e gerenciamento de pacotes de viagem.
 
@@ -135,7 +135,7 @@
                     <button class="btn">Ver menos</button>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card biblioteca">
                 <h2>CRUD Biblioteca</h2>
                 <p>Aplicação web com TypeScript, React, Express e SQLite para cadastro, consulta e gerenciamento de
                     livros.
@@ -169,24 +169,18 @@
                 </div>
             </div>
             <div class="project-card">
-                <h2>Calculadora de Frete</h2>
-                <p>Trabalho inicial em Java para cálculo e previsão de frete, com diferenciação de usuários e
-                    interfaces.
+                <h2>Gerenciador de Eventos</h2>
+                <p>Projeto de gerenciamento de eventos, com cadastro de eventos e usuários.
                 </p>
                 <button class="btn">Ver mais</button>
                 <div class="card-content hidden">
                     <div class="img-wrapper">
                         <div class="text-container">
-                            <h2>Funcionalidades do FitTrack</h2>
+                            <h2>Funcionalidades do Gerenciador de Eventos</h2>
                             <ul>
-                                <li class="list-elements">Sistema de cadastro, banco de dados e autenticação de usuários
-                                    com
-                                    <a href="https://supabase.com/" target="_blank">Supabase</a>.
-                                </li>
-                                <li class="list-elements">Criação e gerenciamento de treinos personalizados.</li>
-                                <li class="list-elements">Registro de histórico de exercícios para acompanhamento de
-                                    progresso.</li>
-                                <li class="list-elements">Interface intuitiva e responsiva para fácil navegação.</li>
+                                <li class="list-elements">Criação e gerenciamento de eventos.</li>
+                                <li class="list-elements">Cadastro e gerenciamento de usuários.</li>
+                                <li class="list-elements">Visualização de eventos e detalhes por parte do usuário.</li>
                             </ul>
                         </div>
                         <div class="img-container">
@@ -195,33 +189,34 @@
                                     class="project-image">
                             </a>
                         </div>
-                        <div class="img-wrapper">
-                            <div class="text-container">
-                                <h2>Tecnologias Utilizadas</h2>
-                                <ul>
-                                    <li class="list-elements">Typescript</li>
-                                    <li class="list-elements">Next.js</li>
-                                    <li class="list-elements">Consumo de API</li>
-                                    <li class="list-elements">Supabase</li>
-                            </div>
-                            <div class="img-container">
-                                <a href="src\img\fitTrackLogin.png" target="_blank">
-                                    <img class="img-ss" src="src\img\fitTrackLogin.png" alt="Imagem do projeto FitTrack"
-                                        class="project-image">
-                                </a>
-                            </div>
-
-                        </div>
-                        <button class="btn">Ver menos</button>
                     </div>
+                    <div class="img-wrapper">
+                        <div class="text-container">
+                            <h2>Tecnologias Utilizadas</h2>
+                            <ul>
+                                <li class="list-elements">Typescript</li>
+                                <li class="list-elements">Next.js</li>
+                                <li class="list-elements">Consumo de API REST</li>
+                                <li class="list-elements">Supabase</li>
+                        </div>
+                        <div class="img-container">
+                            <a href="src\img\fitTrackLogin.png" target="_blank">
+                                <img class="img-ss" src="src\img\fitTrackLogin.png" alt="Imagem do projeto FitTrack"
+                                    class="project-image">
+                            </a>
+                        </div>
+
+                    </div>
+                    <button class="btn">Ver menos</button>
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
 
-        <footer>
-            &copy; 2026 Eric Prates | Portfólio Pessoal
-        </footer>
-        <script src="script.js"></script>
+    <footer>
+        &copy; 2026 Eric Prates | Portfólio Pessoal
+    </footer>
+    <script src="script.js"></script>
     </div>
 </body>
 

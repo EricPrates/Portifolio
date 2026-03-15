@@ -2,7 +2,7 @@ let btn = document.querySelectorAll('.project-card button');
 let btnclose = document.querySelectorAll('.card-content button');
 let topics = document.querySelectorAll('.list-elements');
 let wrappers = document.querySelectorAll('.img-wrapper');
-
+const themeToggle = document.getElementById('theme-toggle');
 
 
 btn.forEach((button) => {
@@ -22,6 +22,7 @@ btn.forEach((button) => {
     });
 });
 
+
 btnclose.forEach((button) => {
     button.addEventListener('click', () => {
         if(button.parentElement.classList.contains('hidden')) {
@@ -33,6 +34,8 @@ btnclose.forEach((button) => {
         }
     });
 });
+
+
 
 topics.forEach((topic) => {
     let text = topic.textContent;
