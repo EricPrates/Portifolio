@@ -8,41 +8,23 @@
  :root {
      --primary-color: #0f90db;
      --fitTrack-color: #f17d1e;
+     --ecommerce-color: #f36a0f;
      --secondary-color: #3af5b7;
      --background-color: #000927;
      --card-background: #1c1c3a;
      --text-color: #ffffff;
      --vendasViagens-color: #0d94e2;
      --biblioteca-color: #4c26f5;
-     
-     
- }
 
 
- #theme-toggle {
-     position: fixed;
-     top: 20px;
-     right: 20px;
-     background: linear-gradient(90deg, #0d94e2, #058ddc);
-     color: #ffffff;
-     border: none;
-     padding: 10px 20px;
-     cursor: pointer;
-     transition: background-color 0.3s, color 0.3s;
-     z-index: 1000;
-     border-radius: 10px;
  }
-#theme-toggle:hover {
-     background: linear-gradient(90deg, #058ddc, #0d94e2);
-     color: #ffffffcc;
-    transform: scale(1.07);
 
- }
  body {
      background-color: var(--background-color);
      color: #ffffff;
      padding: 20px;
  }
+
 
  .container {
      max-width: 1200px;
@@ -59,12 +41,50 @@
      margin-bottom: 10px;
  }
 
+ .link-container {
+    margin-top: auto;
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     border-radius: 20px;
+     background-color: #000927;
+     padding: 20px;
+     margin: auto;
+     
+     
+ }
+ .link-container h3 {
+     color: #ffffff;
+     font-size: 1.2rem;
+     align-self: flex-start;
+     margin-left: 20px;
+ }
+ .link-container p {
+     align-self: flex-start;
+     margin-left: 20px;
+    
+ }
  #welcome-message {
      text-align: center;
      font-size: 1.2rem;
      margin-bottom: 40px;
      color: #ffffffcc;
  }
+
+ #welcome-message a {
+     text-align: center;
+     font-size: 1.2rem;
+     margin-bottom: 40px;
+     color: var(--secondary-color);
+ }
+
+ #welcome-message a:hover {
+     color: #11bfeb;
+     transform: scale(1.05);
+     transition: color 0.3s, transform 0.3s;
+ }
+
 
 
  #projects-section {
@@ -134,6 +154,7 @@
 
  .card-content .btn {
      margin: 20px;
+     margin-left: 40px;
  }
 
  .btn:hover {
@@ -143,6 +164,7 @@
 
  .hidden {
      display: none;
+
  }
 
  .img-wrapper {
@@ -156,6 +178,7 @@
 
 
  }
+
 
  .img-wrapper:nth-of-type(even) {
      direction: rtl;
@@ -173,9 +196,38 @@
      color: #ffffff99;
      border: #3af5b7 outset 1px;
      border-radius: 20px;
+     animation: slideInTop 1s ease-out;
+     transition: max-height 0.4s ease, opacity 0.4s ease;
 
  }
 
+ .ecommerce .card-content {
+     border-color: var(--ecommerce-color);
+
+
+ }
+
+ .ecommerce h2 {
+     color: var(--ecommerce-color);
+ }
+
+ .ecommerce .btn {
+     background-color: var(--ecommerce-color);
+     color: #ffffff;
+ }
+
+ .ecommerce a {
+
+     color: var(--ecommerce-color);
+ }
+ .ecommerce .btn:hover {
+     background-color: #ffffff;
+     color: var(--ecommerce-color);
+ }
+ .project-card.ecommerce:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 20px rgba(241, 125, 30, 0.3);
+ }
  .fitTrack .card-content {
      border-color: var(--fitTrack-color);
 
@@ -191,6 +243,26 @@
      color: #ffffff;
  }
 
+ .fitTrack a {
+
+     color: var(--fitTrack-color);
+ }
+
+ .biblioteca a {
+
+     color: var(--biblioteca-color);
+ }
+
+ .vendasViagens a {
+
+     color: var(--vendasViagens-color);
+ }
+
+ .gerenciadorEventos a {
+
+     color: var(--secondary-color);
+ }
+
  .fitTrack .btn:hover {
      background-color: #ffffff;
      color: var(--fitTrack-color);
@@ -201,15 +273,65 @@
      box-shadow: 0 10px 20px rgba(241, 125, 30, 0.3);
  }
 
+ .objective-container {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     align-items: space-between;
+     width: 100%;
+     margin: 10px;
+     padding: 10px;
+     gap: 30px;
+ }
+
+
+ #footer {
+        
+     display: flex;
+     flex-direction: column;
+     color: #ffffffe7;
+     text-decoration: none;
+     margin: 20 20px;
+     transition: color 0.3s;
+ }
+
+
+ .objective-container a {
+     display: inline-block;
+     margin-top: 10px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: color 0.3s;
+
+ }
+
+ .fitTrack .objective-container a:hover {
+     color: #ffffff;
+ }
+
+ .objective-container p {
+     text-align: justify;
+     color: #ffffffcc;
+     margin-top: 10px;
+     font-size: 1rem;
+ }
+
  .fitTrack .text-container:hover {
-     transform: scale(1.0);
-     transition: transform 0.3s;
      box-shadow: 0 10px 20px rgba(241, 125, 30, 0.3);
  }
 
+ .gerenciadorEventos .card-content {
+     border-color: var(--secondary-color);
+ }
+
+ .gerenciadorEventos .text-container:hover {
+     box-shadow: 0 10px 20px rgba(58, 245, 183, 0.3);
+ }
+
+ .gerenciadorEventos .img-ss:hover {
+     box-shadow: 0 10px 20px rgba(58, 245, 183, 0.3);
+ }
+
  .fitTrack .img-ss:hover {
-     transform: scale(1.02);
-     transition: transform 0.3s;
      box-shadow: 0 10px 20px rgba(241, 125, 30, 0.3);
  }
 
@@ -237,14 +359,10 @@
  }
 
  .vendasViagens .text-container:hover {
-     transform: scale(1.0);
-     transition: transform 0.3s;
      box-shadow: 0 10px 20px rgba(13, 148, 226, 0.3);
  }
 
  .vendasViagens .img-ss:hover {
-     transform: scale(1.02);
-     transition: transform 0.3s;
      box-shadow: 0 10px 20px rgba(13, 148, 226, 0.3);
  }
 
@@ -272,14 +390,10 @@
  }
 
  .biblioteca .text-container:hover {
-     transform: scale(1.0);
-     transition: transform 0.3s;
      box-shadow: 0 10px 20px rgba(76, 38, 245, 0.3);
  }
 
  .biblioteca .img-ss:hover {
-     transform: scale(1.02);
-     transition: transform 0.3s;
      box-shadow: 0 10px 20px rgba(76, 38, 245, 0.3);
  }
 
@@ -287,7 +401,7 @@
 
      width: 95%;
      border-radius: 50px;
-
+     animation: slideInRight 1s ease-out;
 
  }
 
@@ -295,15 +409,14 @@
 
      transform: scale(1.05);
      transition: transform 0.3s;
-    
+
 
  }
 
 
  .text-container:hover {
-     transform: scale(1.05);
+     transform: scale(1.02);
      transition: transform 0.3s;
-     box-shadow: 0 10px 20px rgba(0, 255, 180, 0.3);
 
  }
 

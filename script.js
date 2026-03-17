@@ -1,37 +1,28 @@
-let btn = document.querySelectorAll('.project-card button');
-let btnclose = document.querySelectorAll('.card-content button');
+let btnOpen = document.querySelectorAll('.project-card > button');
+let btnClose = document.querySelectorAll('.card-content button');
 let topics = document.querySelectorAll('.list-elements');
 let wrappers = document.querySelectorAll('.img-wrapper');
-const themeToggle = document.getElementById('theme-toggle');
+let links = document.querySelectorAll('.link-container p');
+let projectCards = document.querySelectorAll('.project-card');
 
 
-btn.forEach((button) => {
+btnOpen.forEach((button) => {
     button.addEventListener('click', () => {
-        if(button.nextElementSibling.classList.contains('hidden')) {
-            
-            button.nextElementSibling.classList.remove('hidden');
-            button.classList.add('hidden');
-            
-        } else {
-            button.nextElementSibling.classList.add('hidden');
-            button.classList.remove('hidden');
-            
-          
-        }
-        
+        let content = button.nextElementSibling;
+        content.classList.remove('hidden');
+        button.classList.add('hidden');
+
     });
 });
 
 
-btnclose.forEach((button) => {
+
+btnClose.forEach((button) => {
     button.addEventListener('click', () => {
-        if(button.parentElement.classList.contains('hidden')) {
-            button.parentElement.classList.remove('hidden');
-            button.parentElement.previousElementSibling.classList.add('hidden');
-        } else {
-            button.parentElement.classList.add('hidden');
-            button.parentElement.previousElementSibling.classList.remove('hidden');
-        }
+        let content = button.parentElement;
+        const openBtn = content.previousElementSibling;
+        content.classList.add('hidden');
+        openBtn.classList.remove('hidden');
     });
 });
 
@@ -39,7 +30,31 @@ btnclose.forEach((button) => {
 
 topics.forEach((topic) => {
     let text = topic.textContent;
-    switch(text) {
+    switch (text) {
+        case 'Java Swing':
+            let imgSwing = document.createElement('img');
+            imgSwing.src = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg';
+            imgSwing.width = 30;
+            topic.insertAdjacentElement('afterbegin', imgSwing);
+            imgSwing.style.marginRight = '20px';
+            imgSwing.style.verticalAlign = 'middle';
+            break;
+        case 'Java':
+            let imgJava = document.createElement('img');
+            imgJava.src = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg';
+            imgJava.width = 30;
+            topic.insertAdjacentElement('afterbegin', imgJava);
+            imgJava.style.marginRight = '20px';
+            imgJava.style.verticalAlign = 'middle';
+            break;
+            case 'SQLWorkbench':
+            let imgSQL = document.createElement('img');
+            imgSQL.src = 'https://cdn.simpleicons.org/mysql/4479A1';
+            imgSQL.width = 30;
+            topic.insertAdjacentElement('afterbegin', imgSQL);
+            imgSQL.style.marginRight = '20px';
+            imgSQL.style.verticalAlign = 'middle';
+            break;
         case 'Typescript':
             let img = document.createElement('img');
             img.src = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg';
@@ -88,13 +103,21 @@ topics.forEach((topic) => {
             img6.style.marginRight = '20px';
             img6.style.verticalAlign = 'middle';
             break;
-        case 'React':
+        case 'React.js':
             let img7 = document.createElement('img');
             img7.src = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg';
             img7.width = 30;
             topic.insertAdjacentElement('afterbegin', img7);
             img7.style.marginRight = '20px';
             img7.style.verticalAlign = 'middle';
+            break;
+            case 'React Native':
+            let imgrn = document.createElement('img');
+            imgrn.src = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg';
+            imgrn.width = 30;
+            topic.insertAdjacentElement('afterbegin', imgrn);
+            imgrn.style.marginRight = '20px';
+            imgrn.style.verticalAlign = 'middle';
             break;
         case 'JavaScript':
             let img8 = document.createElement('img');
@@ -106,7 +129,7 @@ topics.forEach((topic) => {
             break;
         case 'Postman':
             let img9 = document.createElement('img');
-            img9.src = '';
+            img9.src = 'https://cdn.simpleicons.org/postman/FF6C37';
             img9.width = 30;
             topic.insertAdjacentElement('afterbegin', img9);
             img9.style.marginRight = '20px';
@@ -115,4 +138,34 @@ topics.forEach((topic) => {
     }
 
 
+});
+
+links.forEach((link) => {
+    if (link.innerHTML.includes('GitHub')) {
+        let imgGitHub = document.createElement('img');
+        imgGitHub.src = 'https://cdn.simpleicons.org/github/FFFFFF';
+        imgGitHub.width = 20;
+        link.insertAdjacentElement('afterbegin', imgGitHub);
+        imgGitHub.style.marginRight = '20px';
+        imgGitHub.style.marginBottom = '5px';
+        imgGitHub.style.verticalAlign = 'middle';
+    }
+    if (link.innerHTML.includes('Vercel')) {
+        let imgVercel = document.createElement('img');
+        imgVercel.src = 'https://cdn.simpleicons.org/vercel/FFFFFF';
+        imgVercel.width = 20;
+        link.insertAdjacentElement('afterbegin', imgVercel);
+        imgVercel.style.marginRight = '20px';
+        imgVercel.style.marginBottom = '5px';
+        imgVercel.style.verticalAlign = 'middle';
+    }
+        if (link.innerHTML.includes('Render')) {
+        let imgRender = document.createElement('img');
+        imgRender.src = 'https://cdn.simpleicons.org/render/FFFFFF';
+        imgRender.width = 20;
+        link.insertAdjacentElement('afterbegin', imgRender);
+        imgRender.style.marginRight = '20px';
+        imgRender.style.marginBottom = '5px';
+        imgRender.style.verticalAlign = 'middle';
+    }
 });
