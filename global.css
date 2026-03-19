@@ -40,9 +40,10 @@
  }
 
  .avatar {
+    display: flex;
      border-radius: 50%;
      border: 2px solid var(--primary-color);
-
+     animation: slideInRight 1s ease-out;
 
  }
 
@@ -172,10 +173,8 @@
  }
 
  .about-card {
-     border-radius: 20px;
+     border-radius: 12px;
      padding: 20px;
-     position: relative;
-     overflow: hidden;
      border: 1px solid rgba(255, 255, 255, 0.06);
      animation: slideInTop 1s ease-out;
      transition: transform 0.2s, box-shadow 0.2s;
@@ -303,6 +302,7 @@
      animation: slideInTop 1s ease-out;
      border-style: outset;
      border: 1px outset var(--primary-color);
+     width: 90%;
 
  }
 
@@ -378,6 +378,7 @@
      flex-direction: column;
      gap: 12px;
      padding-left: 20px;
+     width: 100%;
 
  }
 
@@ -385,8 +386,9 @@
      display: flex;
      flex-direction: column;
      justify-content: space-around;
-     gap: 1px;
+     gap: 10px;
      padding-right: 20px;
+     margin-right: 20px;
 
  }
 
@@ -439,19 +441,20 @@
  }
 
  .about-line-bottom {
+
      margin-left: 10px;
      margin-top: 20px;
-     width: 200%;
+     width: 90%;
      height: 1px;
      background: linear-gradient(90deg, transparent, var(--biblioteca-color), var(--fitTrack-color));
-
+     display: block;
  }
 
 
  .btn {
      margin-top: 20px;
      background-color: var(--secondary-color);
-  color:#ffffff;
+     color: #ffffff;
      border: none;
      padding: 10px 20px;
      cursor: pointer;
@@ -598,12 +601,14 @@
 
      color: var(--secondary-color);
  }
-.gerenciadorEventos .btn {
-        background-color: var(--secondary-color);
+
+ .gerenciadorEventos .btn {
+     background-color: var(--secondary-color);
      color: #ffffff;
-        border: 2px outset #15684c;
-     
+     border: 2px outset #15684c;
+
  }
+
  .fitTrack .btn:hover {
      background-color: #ffffff;
      color: var(--fitTrack-color);
@@ -741,20 +746,23 @@
  }
 
  .img-ss {
-    
+
      width: 95%;
      max-width: 500px;
      border-radius: 20px;
      animation: slideInRight 1s ease-out;
-   
+
 
  }
- .about-card.blue .card-desc{
-        color: #7cc8f0;
+
+ .about-card.blue .card-desc {
+     color: #7cc8f0;
  }
-.about-card.orange .card-desc{
-        color: #f7aa74;
+
+ .about-card.orange .card-desc {
+     color: #f7aa74;
  }
+
  .img-ss:hover {
 
      transform: scale(1.05);
@@ -762,13 +770,14 @@
 
 
  }
- .about-card.purple .card-desc{
-        color: #d48df7;
+
+ .about-card.purple .card-desc {
+     color: #d48df7a2;
  }
 
  .text-container {
      border: 1px outset var(--textContainer-color);
-     
+
      background-color: #2a2a4a;
      color: #ffffff;
      width: 85%;
@@ -884,10 +893,120 @@
      }
  }
 
- @media (max-width: 600px) {
+ @media (max-width: 768px) {
+     #about-section {
+         margin: 20px;
+         padding: 20px;
+         border-radius: 20px;
+         width: 100%;
+         margin: 10px 0;
+         padding: 16px;
+
+     }
+
+     .about-grid {
+         margin:10px;
+         padding: 10px;
+         grid-template-columns: 1fr;
+         gap: 20px;
+         min-width: 0px;
+     }
+
+     .about-bio {
+         font-size: 0.8rem;
+     }
+
+     .about-actions {
+         justify-content: center;
+     }
+
+     .avatar {
+         min-width: 80px;
+
+     }
+
+     .about-heading {
+         font-size: 1.5rem;
+     }
+
+     .about-role {
+         font-size: 1rem;
+         margin-right: auto;
+     }
+
+     .stat-label {
+         font-size: 0.6rem;
+     }
+
+     .about-top {
+
+         margin-bottom: 20px;
+     }
+
+     .about-left {
+         min-width: 0px;
+         padding-left: 0;
+     }
+
+     .about-right {
+         display: flex;
+         margin-left: auto;
+         min-width: 0px;
+         gap: 20px;
+
+     }
+
+     .about-stats {
+         justify-content: center;
+         min-width: 0px;
+         font-size: 0.6rem;
+         gap: 10px;
+     }
+
+     .status-badge {
+         font-size: 0.8rem;
+         padding: 4px 12px;
+     }
+
+     .about-label {
+         font-size: 0.6rem;
+     }
+
+     .about-actions a {
+         font-size: 0.6rem;
+     }
+
+     .about-actions {
+         gap: 10px;
+     }
+
+     .about-card.about-card.orange {
+         min-width: 150px;
+
+
+     }
+
+     .about-card.about-card.blue {
+         min-width: 150px;
+
+     }
+
+     .about-card.about-card.purple {
+         min-width: 150px;
+
+     }
+
+     .stat {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         ;
+     }
+
      #main-title {
          font-size: 2.2rem;
      }
+
 
      #welcome-message {
          font-size: 1rem;
@@ -929,7 +1048,60 @@
      .btn {
          padding: 8px 16px;
      }
+    }
+@media (max-width:425PX) {
+     .about-heading {
+         flex-direction: column;
+         gap: 10px;
+     }
 
+     .avatar {
+         margin: 0;
+     }
+
+     .about-role {
+         margin: 0;
+     }
+
+     .about-top {
+         flex-direction: column;
+         gap: 10px;
+     }
+
+     .about-actions {
+         flex-direction: column;
+         gap: 10px;
+         width: fit-content;
+            margin: auto;
+     }
+
+     .about-right {
+        margin:auto;
+         justify-content: center;
+     }
+     .about-grid {
+         gap: 20px;
+     }
+     .avatar{
+        width: 120px;
+     }
+     .img-wrapper {
+         display: grid;
+         grid-template-columns: 1fr;
+         align-items: center;
+     }
+     .text-container{
+        min-width: 0%;
+        margin: 0;
+     }
+      .img-ss {
+         width: 0;
+         max-width: none;
+     }
+      .about-card {
+         padding: 15px;
+     }
+      
 
 
  }
