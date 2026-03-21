@@ -4,7 +4,9 @@ let topics = document.querySelectorAll('.list-elements');
 let wrappers = document.querySelectorAll('.img-wrapper');
 let links = document.querySelectorAll('.link-container p');
 let projectCards = document.querySelectorAll('.project-card');
-
+const modal = document.getElementById('video-modal')
+const modalVideo = document.getElementById('modal-video')
+const modalClose = document.getElementById('modal-close')
 
 btnOpen.forEach((button) => {
     button.addEventListener('click', () => {
@@ -14,9 +16,33 @@ btnOpen.forEach((button) => {
 
     });
 });
-
-
-
+document.querySelectorAll('a[href$=".mp4"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault() 
+        const src = link.getAttribute('href')
+        modalVideo.src = src
+        modal.classList.remove('hidden')
+        modalVideo.play()
+    })
+})
+modalClose.addEventListener('click', () => {
+    modal.classList.add('hidden')
+    modalVideo.pause()
+    modalVideo.src = ''
+})
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.add('hidden')
+        modalVideo.pause()
+        modalVideo.src = ''
+    }
+})
+modalVideo.addEventListener('volumechange', () => {
+    if (!modalVideo.muted) {
+        modalVideo.muted = true
+        modalVideo.volume = 0
+    }
+})
 btnClose.forEach((button) => {
     button.addEventListener('click', () => {
         let content = button.parentElement;
