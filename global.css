@@ -3,6 +3,7 @@
      padding: 0;
      box-sizing: border-box;
      font-family: 'Inter', sans-serif;
+
  }
 
  :root {
@@ -24,6 +25,50 @@
      color: #ffffff;
      padding: 20px;
 
+ }
+
+ .modal-overlay {
+     position: fixed;
+     inset: 0;
+     background: rgba(0, 0, 9, 0.85);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1000;
+     backdrop-filter: blur(4px);
+ }
+
+ .modal-content {
+     position: relative;
+     width: 90%;
+     max-width: 900px;
+     background: #1c1c3a;
+     border-radius: 16px;
+     padding: 20px;
+     border: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ .modal-close {
+     position: absolute;
+     top: -14px;
+     right: -14px;
+     width: 32px;
+     height: 32px;
+     border-radius: 50%;
+     background: #0f90db;
+     color: #fff;
+     border: none;
+     cursor: pointer;
+     font-size: 0.9rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: background 0.2s;
+ }
+
+ .modal-close:hover {
+     background: #3af5b7;
+     color: #000927;
  }
 
  #welcome-message {
@@ -114,11 +159,11 @@
      border-radius: 20px;
      background-color: transparent;
      padding: 20px;
-
      background-color: var(--background-color);
      animation: pulseOrange 2s ease infinite;
      transition: transform 0.3s, box-shadow 0.3s;
-     min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
 
  }
 
@@ -131,7 +176,7 @@
 
  .link-container p {
      align-self: flex-start;
-     margin-left: 20px;
+   
 
  }
 
@@ -508,6 +553,12 @@
      display: none;
 
  }
+ .list-elements img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
 
  .img-wrapper {
      display: grid;
@@ -515,10 +566,10 @@
      align-items: center;
      margin: 10px;
      padding: 10px;
-     gap: 40px; 
+     gap: 40px;
      width: 100%;
      box-sizing: border-box;
-        padding: 20px;
+     padding: 20px;
 
  }
 
@@ -530,8 +581,8 @@
  .img-wrapper:nth-of-type(even) .text-container,
  .img-wrapper:nth-of-type(even) .img-container {
      direction: ltr;
-    
-   
+
+
 
  }
 
@@ -651,11 +702,12 @@
  .gerenciadorEventos .btn {
      background-color: var(--secondary-color);
      color: #ffffff;
-    
+
  }
- .gerenciadorEventos .btn:hover{
-    color: #3af5b7;
-    background-color: white;
+
+ .gerenciadorEventos .btn:hover {
+     color: #3af5b7;
+     background-color: white;
  }
 
  .fitTrack .btn:hover {
@@ -764,7 +816,7 @@
  .vendasViagens .img-ss {
      box-shadow: 0 10px 20px rgba(13, 148, 226, 0.3);
      max-width: 250px;
-    
+
  }
 
  .biblioteca .card-content {
@@ -835,7 +887,7 @@
  }
 
  .text-container {
-    text-align: start;
+     text-align: start;
      border: 1px outset var(--textContainer-color);
      background-color: #2a2a4a;
      color: #ffffff;
@@ -1162,7 +1214,7 @@
          padding: 10px;
      }
 
-     
+
 
      .text-container li {
          font-size: 0.7rem;
@@ -1176,7 +1228,7 @@
          flex-direction: column;
      }
 
-  
+
      .img-wrapper {
 
          flex-direction: column;
@@ -1192,7 +1244,11 @@
          flex-direction: column;
          gap: 10px;
      }
-
+     .list-elements img {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+    }
      .avatar {
          margin: 0;
      }
@@ -1221,15 +1277,18 @@
      .about-grid {
          gap: 20px;
      }
-     .card-desc{
-        font-size: 0.8rem;
+
+     .card-desc {
+         font-size: 0.8rem;
      }
+
      .tech-stack {
          display: flex;
          flex-direction: row;
          flex-wrap: wrap;
-         width:fit-content;
+         width: fit-content;
      }
+
      .avatar {
          width: 120px;
      }
@@ -1237,10 +1296,10 @@
      .img-wrapper {
          display: grid;
          grid-template-columns: 1fr;
-         align-items: center;
+    
      }
 
-     
+
 
 
      .about-card {
@@ -1256,13 +1315,8 @@
          padding: 15px;
      }
 
-     .card-content .text-container ul {
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         gap: 6px;
-         width: 100%;
-     }
-    
+
+
      .text-container li {
          font-size: 0.8rem;
      }
@@ -1290,6 +1344,8 @@
      .link-container h3 {
          font-size: 1rem;
      }
+
+    
 
      .project-card p {
          font-size: 0.8rem;
