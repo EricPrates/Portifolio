@@ -3,6 +3,7 @@
      padding: 0;
      box-sizing: border-box;
      font-family: 'Inter', sans-serif;
+
  }
 
  :root {
@@ -158,11 +159,11 @@
      border-radius: 20px;
      background-color: transparent;
      padding: 20px;
-
      background-color: var(--background-color);
      animation: pulseOrange 2s ease infinite;
      transition: transform 0.3s, box-shadow 0.3s;
-     min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
 
  }
 
@@ -175,7 +176,7 @@
 
  .link-container p {
      align-self: flex-start;
-     margin-left: 20px;
+   
 
  }
 
@@ -552,6 +553,12 @@
      display: none;
 
  }
+ .list-elements img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
 
  .img-wrapper {
      display: grid;
@@ -1237,7 +1244,11 @@
          flex-direction: column;
          gap: 10px;
      }
-
+     .list-elements img {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+    }
      .avatar {
          margin: 0;
      }
@@ -1285,7 +1296,7 @@
      .img-wrapper {
          display: grid;
          grid-template-columns: 1fr;
-         align-items: center;
+    
      }
 
 
@@ -1304,12 +1315,7 @@
          padding: 15px;
      }
 
-     .card-content .text-container ul {
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         gap: 6px;
-         width: 100%;
-     }
+
 
      .text-container li {
          font-size: 0.8rem;
@@ -1338,6 +1344,8 @@
      .link-container h3 {
          font-size: 1rem;
      }
+
+    
 
      .project-card p {
          font-size: 0.8rem;

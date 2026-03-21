@@ -60,17 +60,13 @@ const iconMap = {
     'MySQL': 'https://cdn.simpleicons.org/mysql/4479A1',
     'Typescript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
     'Next.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
-    'Consumo de API REST': 'https://cdn.simpleicons.org/postman/FF6C37',
+    'API REST': 'https://cdn.simpleicons.org/postman/FF6C37',
     'Supabase': 'https://cdn.simpleicons.org/supabase/3ECF8E',
     'Express': 'https://cdn.simpleicons.org/express/ffffff',
     'SQLite': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg',
     'React.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     'React Native': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     'JavaScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-}
-
-function getIconSize() {
-    return window.innerWidth < 600 ? 20 : 30
 }
 
 topics.forEach((topic) => {
@@ -80,8 +76,7 @@ topics.forEach((topic) => {
     if (src) {
         const img = document.createElement('img')
         img.src = src
-        img.width = getIconSize()
-        img.style.marginRight = '20px'
+        img.style.marginRight = '10px'
         img.style.verticalAlign = 'middle'
         topic.insertAdjacentElement('afterbegin', img)
     }
@@ -100,7 +95,7 @@ links.forEach((link) => {
         imgGitHub.src = 'https://cdn.simpleicons.org/github/FFFFFF';
         imgGitHub.width = 20;
         link.insertAdjacentElement('afterbegin', imgGitHub);
-        imgGitHub.style.marginRight = '20px';
+        imgGitHub.style.marginRight = '10px';
         imgGitHub.style.marginBottom = '5px';
         imgGitHub.style.verticalAlign = 'middle';
     }
@@ -109,7 +104,7 @@ links.forEach((link) => {
         imgVercel.src = 'https://cdn.simpleicons.org/vercel/FFFFFF';
         imgVercel.width = 20;
         link.insertAdjacentElement('afterbegin', imgVercel);
-        imgVercel.style.marginRight = '20px';
+        imgVercel.style.marginRight = '10px';
         imgVercel.style.marginBottom = '5px';
         imgVercel.style.verticalAlign = 'middle';
     }
@@ -118,7 +113,7 @@ links.forEach((link) => {
         imgRender.src = 'https://cdn.simpleicons.org/render/FFFFFF';
         imgRender.width = 20;
         link.insertAdjacentElement('afterbegin', imgRender);
-        imgRender.style.marginRight = '20px';
+        imgRender.style.marginRight = '10px';
         imgRender.style.marginBottom = '5px';
         imgRender.style.verticalAlign = 'middle';
     }
