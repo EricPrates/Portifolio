@@ -199,7 +199,7 @@
      flex-direction: column;
      justify-content: space-between;
      transition: transform 0.3s, box-shadow 0.3s;
-     animation: slideInTop 1s ease-out;
+ 
 
  }
 
@@ -239,7 +239,6 @@
      border-radius: 12px;
      padding: 20px;
      border: 1px solid rgba(255, 255, 255, 0.06);
-     animation: slideInTop 1s ease-out;
      transition: transform 0.2s, box-shadow 0.2s;
  }
 
@@ -958,7 +957,16 @@
  }
 
 
+.reveal {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
+.reveal.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
 
  @keyframes slideInRight {
 
