@@ -8,17 +8,36 @@ const modal = document.getElementById('video-modal')
 const modalVideo = document.getElementById('modal-video')
 const modalClose = document.getElementById('modal-close')
 
+
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target)
+        }
+
+    })
+
+}, { threshold: 0.2 });
+
+
+document.querySelectorAll('.project-card').forEach((el, index) => {
+    el.classList.add('reveal')
+    el.style.transitionDelay = `${index * 0.1}s`
+    observer.observe(el)
+})
+
 btnOpen.forEach((button) => {
     button.addEventListener('click', () => {
         let content = button.nextElementSibling;
         content.classList.remove('hidden');
         button.classList.add('hidden');
+    })
+})
 
-    });
-});
 document.querySelectorAll('a[href$=".mp4"]').forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault() 
+        e.preventDefault()
         const src = link.getAttribute('href')
         modalVideo.src = src
         modal.classList.remove('hidden')
